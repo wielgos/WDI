@@ -5,7 +5,7 @@ class Node:
 
 
 def wstaw(first, element):
-    if czy_nalezy(first,element):
+    if czy_nalezy(first, element):
         return first
     if first is None:
         first = Node()
@@ -51,9 +51,6 @@ def usun(first, element):
         return q.next
     while True:
         if q.next is not None:
-            if q.next.next is None and q.next.value == element:
-                q.next = None
-                return first
             if q.next.value == element:
                 q.next = q.next.next
                 return first
@@ -68,5 +65,8 @@ if __name__ == '__main__':
     while True:
         num = input(">")
         if num == "x": break
-        first = wstaw(first,int(num))
+        first = wstaw(first, int(num))
+    first = usun(first, 4)
+    first = usun(first, 5)
+    first = usun(first, 6)
     wypisz(first)
