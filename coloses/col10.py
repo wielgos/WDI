@@ -1,0 +1,1 @@
+#nie zrozumialem tresci ;00-(*_
