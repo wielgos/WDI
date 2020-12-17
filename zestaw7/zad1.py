@@ -1,25 +1,13 @@
+# 1. Zaimplementuj zbiór mnogościowy liczb naturalnych korzystając ze
+# struktury listy odsyłaczowej.
+# - czy element należy do zbioru
+# - wstawienie elementu do zbioru
+# - usunięcie elementu ze zbioru
+
 class Node:
-    def __init__(self, value = None):
+    def __init__(self, value=None):
         self.value = value
         self.next = None
-
-def wstaw(first,element):
-    prev = None
-    p = first
-    while p is not None and p.value < element:
-        prev = p
-        p = p.next
-    if p is not None and p.value == element: return first
-
-    q = Node(element)
-
-    if prev is None:
-        q.next = p
-        return q
-
-    prev.next = q
-    q.next = p
-    return first
 
 
 def czy_nalezy(first, element):
@@ -45,10 +33,29 @@ def usun(first, element):
     return first
 
 
-def wypisz(q):
-    while q is not None:
-        print(q.value, end=" ")
-        q = q.next
+def wstaw(first, element):
+    prev = None
+    p = first
+    while p is not None and p.value < element:
+        prev = p
+        p = p.next
+    if p is not None and p.value == element: return first
+
+    q = Node(element)
+
+    if prev is None:
+        q.next = p
+        return q
+
+    prev.next = q
+    q.next = p
+    return first
+
+
+def wypisz(p):
+    while p is not None:
+        print(p.value, end=" ")
+        p = p.next
     print()
 
 
@@ -58,9 +65,8 @@ if __name__ == '__main__':
         num = input(">")
         if num == "x": break
         first = wstaw(first, int(num))
-    print(czy_nalezy(first,7))
-    first = usun(first,7)
-    print(czy_nalezy(first, 7))
+    first = usun(first, 5)
     first = usun(first, 6)
-    print(czy_nalezy(first, 10))
+    first = usun(first, 7)
+    first = usun(first, 8)
     wypisz(first)
