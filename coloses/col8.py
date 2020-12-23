@@ -27,7 +27,6 @@ def f(t, w):
                     used += [w[l]]
             if s > largest:
                 largest = s
-                print(largest)
                 col1 = i
                 col2 = k
     return col1, col2
