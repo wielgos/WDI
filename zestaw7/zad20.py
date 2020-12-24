@@ -44,7 +44,6 @@ def f(first):
                     e[1] = p.value[1]
                 break
         if modified == False:
-            print("adding...", p.value)
             przedzialy += [p.value]
         p = p.next
 
