@@ -32,20 +32,24 @@ def wypisz(p):
     print("==========")
 
 def f(first):
-    if f is None: return first
     p = first
     while p is not None:
         if check_key(p.value):
             if p.prev is None:
                 first = p.next
+                if p.next is not None:
+                    p.next.prev = None
             else:
                 p.prev.next = p.next
+                if p.next is not None:
+                    p.next.prev = p.prev
         p = p.next
     return first
 
 if __name__ == '__main__':
     t = [1,2,3,4,5,6,7] #1,10,11,100,101,110,111 (1,2,4,7 out)
-    first = add_elements(t,None)
+    t2 = [1,1,1,1,1,1,1,1]
+    first = add_elements(t2,None)
     wypisz(first)
     first = f(first)
     wypisz(first)

@@ -38,32 +38,19 @@ def wypisz(p):
         p = p.next
     print("==========")
 
-# def main(first):
-#     if first is None: return first
-#     prev = None
-#     p = first
-#     while p is not None:
-#         if check_key(p.key):
-#             if p == first:
-#                 first = p.next
-#             elif p.next is None:
-#                 prev.next = None
-#             else:
-#                 prev.next = p.next
-#         prev, p = p, p.next
-#     return first
-
 def main(first):
-    if first is None: return first
     prev = None
     p = first
     while p is not None:
         if check_key(p.key):
             if prev is None:
                 first = p.next
+                prev, p = None, p.next
             else:
                 prev.next = p.next
-        prev, p = p, p.next
+                p = p.next
+        else:
+            prev, p = p, p.next
     return first
 
 
@@ -72,9 +59,9 @@ if __name__ == '__main__':
     # 471(10) - 122110(3)
     # 213(10) - 21220(3)
     first = None
-    t=[[2,23],[3,471],[5,213]]
+    t=[[2,23],[3,471],[3,471]]
     t2= [[2,23],[3,23],[5,471]]
-    first = add_elements(t2,first)
+    first = add_elements(t,first)
     wypisz(first)
     first = main(first)
     wypisz(first)

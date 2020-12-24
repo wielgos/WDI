@@ -30,7 +30,6 @@ def wypisz(p):
     print("==========")
 
 def f(first):
-    if f is None: return first
     prev = None
     p = first
     while p is not None:
