@@ -8,7 +8,7 @@ class Node:
         self.next = None
         self.key = key
 
-def check_key(n):
+def check_key(n): #true = nalezy go usunac
     ones = 0
     twos = 0
     while n!=0:
@@ -59,9 +59,10 @@ if __name__ == '__main__':
     # 471(10) - 122110(3)
     # 213(10) - 21220(3)
     first = None
-    t=[[2,23],[3,471],[3,471]]
-    t2= [[2,23],[3,23],[5,471]]
-    first = add_elements(t,first)
+    t1=[[2,23],[3,479],[3,471]] #pierwszy nalezy usunac
+    t2= [[5,471],[2,23],[3,23]] #ostatni nalezy usunac
+    t3= [[4,471],[3,471],[2,471],[1,471],[7,471],[8,471],[9,471],[10,471],[11,471]] #wszystkie
+    first = add_elements(t3,first)
     wypisz(first)
     first = main(first)
     wypisz(first)

@@ -56,6 +56,7 @@ def f(first):
 if __name__ == '__main__':
     t=[[15,19],[2,5],[7,11],[8,12],[5,6],[13,17]]
     t2=[[3,9],[5,7],[11,14]]
-    first = add_elements(t2,None)
-    first2 = f(first)
-    wypisz(first2)
+    t3=[[22,24],[6,7],[15,21],[22,23],[5,6],[25,31]]
+    first = add_elements(t3,None)
+    first = f(first)
+    wypisz(first)

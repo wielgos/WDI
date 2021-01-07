@@ -52,4 +52,4 @@ if __name__ == "__main__":
             t[i][j] = randint(1,9)
             print(t[i][j],end="\t")
         print()
-    print(najwieksze_szachowane_pole(t))
+    print(najwieksze_szachowane_pole([[4,0,2],[3,0,0],[6,5,3]]))
