@@ -63,11 +63,11 @@ def divide(n):
                 return True
             return False
         else:
-            if index2 != len(nlist):
+            if index2 != len(nlist) and index2 != 1:
                 if rek(nlist, index1, index2 + 1, slices, numbers):
                     return True
             if rek(nlist, index2, index2 + 1, slices + 1, numbers + [conv_index1_index2(nlist, index1, index2)]):
-                return True
+                    return True
 
     number = conv_to_list(n)
     if rek(number):
@@ -76,7 +76,7 @@ def divide(n):
         return False
 
 
-print(divide(2222))
+print(divide(22222))
 
 # do wyjebania to:
 # *
