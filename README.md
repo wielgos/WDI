@@ -1,7 +1,5 @@
-# zadania z zestawów ćwiczeń WDI 2020
-moje podejscie nieoptymalnych rozwiazan na cwiczeniach z wdi
+# Wstęp do informatyki
 
-niektóre zadania po prostu nie działają bo sie zdenerwowalem i porzucilem
+Przedmiot realizowany w semestrze zimowym 2020/21.
 
-stan punktów zaliczeniowych na 20 sty 2021: 15/30 😎
-8 luty 2021: 16/30 zdane es 😎
+Poszczególne rozwiązania z zestawów zadań i problemów **niekoniecznie** są napisane optymalnie.
